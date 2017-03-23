@@ -1,0 +1,32 @@
+/*
+* @Author: caiyou
+* @Date:   2016-12-21 12:16:54
+* @Last Modified by:   caiyou
+* @Last Modified time: 2017-03-23 17:47:53
+*/
+
+'use strict'
+
+
+var arr = [
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: 666},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: 666},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: 666},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: 666},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: 666},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: 666},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: null},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: null},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: null},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: null},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: null},
+  {part_id: 123, part_name: 'fdsfdfd', cat_id: 999, price: null},
+]
+
+//[{part_id: '', part_name: ''},]
+var destArr = [];
+destArr = arr.filter(a => a.price !== null).map( a => {
+  return { part_id: a.part_id, part_name: a.part_name }
+});
+console.log(destArr)
+

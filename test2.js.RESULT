@@ -1,0 +1,32 @@
+/*
+* @Author: caiyou
+* @Date:   2017-03-21 15:18:41
+* @Last Modified by:   caiyou
+* @Last Modified time: 2017-03-21 15:27:01
+*/
+
+'use strict';
+
+let arr1 = [1, 10, 20, 22, 39, 40, 51, 99]
+
+let arr2 = [3, 10, 13, 19, 33, 55, 100, 110, 200, 300, 400]
+
+let len1=arr1.length,len2=arr2.length;
+let i=0,j=0,res=[];
+while(i<len1||j<len2){
+  if(i==len1) {
+    res = res.concat(arr2.slice(j));
+    break;
+  }
+  if(j==len2){
+    res = res.concat(arr1.slice(i));
+    break;
+  }
+  if(arr1[i] < arr2[j]){
+    res.push(arr1[i++]);
+  }else{
+    res.push(arr2[j++]);
+  }
+}
+
+console.log(res);
